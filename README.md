@@ -33,10 +33,9 @@ Durante o desenvolvimento deste sistema comercial, os principais desafios de eng
 
 ## 📸 Demonstração Visual
 
-Abaixo está um exemplo prático do funcionamento da aplicação, desde a geração do texto persuasivo até o envio final no grupo:
+Abaixo está um exemplo prático do funcionamento da aplicação:
 
-![Exemplo de Mensagem PromoFIT no WhatsApp](link-da-imagem-do-whatsapp-aqui.jpg)
-*Legenda: Oferta de suplemento processada, formatada com copy dinâmico e enviada automaticamente pelo PromoFIT no WhatsApp.*
+<img width="480" height="800" alt="Image" src="https://github.com/user-attachments/assets/b6e34d10-0854-41a0-9109-e6dcedfdba16" />
 
 ---
 *Desenvolvido e mantido por [Matheus Francisconi](https://github.com/MatheusFrancisconi).*
