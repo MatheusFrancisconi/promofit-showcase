@@ -10,29 +10,30 @@ O foco da aplicação não é apenas extrair links, mas aplicar inteligência ao
 
 ## 🛠️ Tecnologias e Arquitetura
 
-A automação foi estruturada para garantir conversão de vendas e estabilidade no envio de mensagens:
+A automação foi estruturada para garantir conversão de vendas, estabilidade no envio de mensagens e alta performance na coleta de dados:
 
-*   **Garimpo de Dados:** [Insira a linguagem/ferramenta, ex: Node.js, Puppeteer, APIs de Afiliados]
-*   **Integração WhatsApp:** [Ex: Baileys, WhatsApp Web.js ou API Oficial]
-*   **Hospedagem e Execução:** [Ex: AWS, VPS Linux, Heroku]
+* **Linguagem Principal:** Python
+* **Garimpo de Dados:** Integração com a API da Shopee via **GraphQL** e rotinas de **Web Scraping** customizadas para o Mercado Livre.
+* **Integração WhatsApp:** EvolutionAPI.
+* **Infraestrutura e Hospedagem:** Servidor VPS na Hostinger, garantindo uptime de 24/7 para os agendamentos.
 
 ## ✨ Principais Funcionalidades
 
-*   **Scraping e Garimpo Ativo:** Rastreio constante de produtos de alta demanda no nicho fitness diretamente na Shopee e no Mercado Livre.
-*   **Filtros de Qualidade:** Algoritmo que avalia reputação do vendedor, percentual real de desconto e avaliações do produto antes de aprovar a oferta.
-*   **Motor de Copywriting Variado:** Geração dinâmica de textos persuasivos (gatilhos de urgência, escassez e benefícios) para acompanhar os links de afiliados, evitando que as mensagens do grupo se tornem repetitivas.
-*   **Agendamento Inteligente:** Sistema de filas e delays para o disparo no WhatsApp, garantindo que as mensagens sejam enviadas nos horários de maior pico de conversão e evitando penalizações na plataforma.
+* **Scraping e Garimpo Ativo:** Rastreio constante de produtos de alta demanda no nicho fitness (suplementos, equipamentos) utilizando APIs diretas e raspagem de dados.
+* **Filtros de Qualidade:** Algoritmo que avalia reputação do vendedor, percentual real de desconto e avaliações do produto antes de aprovar a oferta para o grupo.
+* **Motor de Copywriting Variado:** Geração dinâmica de textos persuasivos (gatilhos de urgência, escassez e benefícios) para acompanhar os links de afiliados, evitando que as mensagens se tornem repetitivas.
+* **Agendamento Inteligente:** Sistema de filas e delays para o disparo no WhatsApp, garantindo que as mensagens sejam enviadas nos horários de maior pico de conversão.
 
 ## 💻 Desafios Técnicos e Aprendizados
 
 Durante o desenvolvimento deste sistema comercial, os principais desafios de engenharia resolvidos foram:
-*   **Normalização de Dados:** Padronizar as informações (título, preço, imagem) vindas de estruturas JSON e HTML completamente diferentes (Shopee vs. Mercado Livre).
-*   **Prevenção de Banimento (Anti-Spam):** Criação da lógica de "agendamento inteligente" para cadenciar o envio de mensagens, simulando o comportamento humano.
-*   **Manutenção de Sessão:** Gerenciamento da conexão com o WhatsApp de forma persistente em um ambiente de servidor, lidando com quedas de conexão e reconexões automáticas.
+* **Normalização de Dados Heterogêneos:** Padronizar as informações (título, preço, imagem) vindas de fontes completamente diferentes, unificando as respostas limpas em JSON do GraphQL da Shopee com a extração bruta de HTML do Mercado Livre.
+* **Prevenção de Banimento (Anti-Spam):** Criação da lógica de agendamento inteligente em Python para cadenciar o envio de mensagens via EvolutionAPI, simulando o comportamento humano e respeitando os limites do WhatsApp.
+* **Gerenciamento de Infraestrutura:** Configuração e manutenção do ambiente na VPS (Hostinger) para garantir que os scripts de automação rodem continuamente de forma autônoma.
 
 ## 📸 Demonstração Visual
 
-Abaixo está um exemplo prático do funcionamento da aplicação, desde a geração do copy até o envio no grupo:
+Abaixo está um exemplo prático do funcionamento da aplicação, desde a geração do texto persuasivo até o envio final no grupo:
 
 ![Exemplo de Mensagem PromoFIT no WhatsApp](link-da-imagem-do-whatsapp-aqui.jpg)
 *Legenda: Oferta de suplemento processada, formatada com copy dinâmico e enviada automaticamente pelo PromoFIT no WhatsApp.*
